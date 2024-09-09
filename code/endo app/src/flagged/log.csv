@@ -1,5 +1,0 @@
-Upload Image,Prediction,flag,username,timestamp
-flagged\Upload Image\58b36c9ef835347f6221\val_polyps_ 3.jpg,"{""label"": ""Class: 3"", ""confidences"": null}",,,2024-05-21 14:04:58.251392
-,"{""label"": null, ""confidences"": null}",,,,2024-05-21 15:39:08.003886
-flagged\Upload Endoscopic Image\76670d02a30c8722ff57\val_ulcer_ 10.jpg,"{""label"": ""ulcerative_colitis"", ""confidences"": null}","The image shows signs of ulcerative colitis, a chronic inflammatory bowel disease.",,,2024-05-21 15:39:16.675817
-flagged\Upload Endoscopic Image\2c5da6277707bd7b7d68\gr9.jpg,"{""label"": ""unknown"", ""confidences"": null}",The confidence is too low to classify this image.,0.43232905864715576,,,2024-05-21 16:42:06.576163
