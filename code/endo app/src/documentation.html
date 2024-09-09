@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Documentation</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            margin: 20px auto;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Model Documentation</h1>
+        <div class="section">
+            <h2>Model Summary</h2>
+            <pre>
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                Output Shape              Param #
+=================================================================
+efficientnetb4 (Functional) (None, 1792)              17673823
+batch_normalization (Batch) (None, 1792)              7168
+dense (Dense)               (None, 256)               459008
+dropout (Dropout)           (None, 256)               0
+dense_1 (Dense)             (None, 4)                 1028
+=================================================================
+Total params: 18141027 (69.20 MB)
+Trainable params: 18012236 (68.71 MB)
+Non-trainable params: 128791 (503.09 KB)
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Techniques Used</h2>
+            <ul>
+                <li>Base Model: EfficientNetB4</li>
+                <li>Batch Normalization</li>
+                <li>Dense Layers</li>
+                <li>Dropout for Regularization</li>
+                <li>Image Data Augmentation</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Model Performance</h2>
+            <h3>Accuracy</h3>
+            <ul>
+                <li>Train Accuracy: 99.97%</li>
+                <li>Validation Accuracy: 99.80%</li>
+                <li>Test Accuracy: 100%</li>
+            </ul>
+            <h3>Confusion Matrix</h3>
+            <img src="confusion.png" alt="Confusion Matrix">
+        </div>
+        <div class="section">
+            <h2>Classification Report</h2>
+            <pre>
+                      precision    recall  f1-score   support
+
+            0_normal       1.00      1.00      1.00       200
+1_ulcerative_colitis       1.00      1.00      1.00       200
+            2_polyps       1.00      1.00      1.00       200
+       3_esophagitis       1.00      1.00      1.00       200
+
+            accuracy                           1.00       800
+           macro avg       1.00      1.00      1.00       800
+        weighted avg       1.00      1.00      1.00       800
+            </pre>
+        </div>
+        <button class="button" onclick="redirect()">Back to Welcome Page</button>
+        <div class="footer">© 2024 CHU Tanger. All rights reserved.</div>
+    </div>
+
+    <script>
+        function redirect() {
+            window.location.href = "welcome.html";
+        }
+    </script>
+</body>
+</html>
